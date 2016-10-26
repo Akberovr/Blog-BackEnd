@@ -1,9 +1,10 @@
 <?php
-
+session_start(); 
+ob_start();
 if (isset($_POST['click'])) {
 	$mailAdress = $_POST['mailAdress'];
 	$password = $_POST['password'];
-	session_start();
+	
 	if (!empty($mailAdress) && !empty($password)) {
 			if($mailAdress=="admin" && $password=="admin"){
 				$_SESSION['login'] = true;
