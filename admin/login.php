@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
-                padding-top: 50px;
-                padding-bottom: 20px;
+                padding-top: 60px;
+                padding-bottom: 30px;
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -58,6 +58,8 @@
                 </form>
 
                 <?php
+
+                //session
                 session_start();
                 if(isset($_SESSION['loginerror'])){ ?>
                         <p><?=$_SESSION['loginerror']?></p>

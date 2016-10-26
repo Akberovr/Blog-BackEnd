@@ -1,19 +1,5 @@
 <?php
 
-
-	// if (isset($_POST['click'])) {
-	// 	$mailAdress = $_POST['mailAdress'];
-	// 	$password = $_POST['password'];
-	// 	$click = $_POST['click'];
-	// 	session_start();
-
-		// if (!empty($mailAdress) && !empty($password)) {
-		// 	echo "welcome";
-	// 	}else
-
-
-	// }else
-
 if (isset($_POST['click'])) {
 	$mailAdress = $_POST['mailAdress'];
 	$password = $_POST['password'];
