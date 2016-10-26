@@ -26,20 +26,5 @@ html,body{
             </form>
         </div>
     </div>
-
-    <?php
-
-
-
-//
-//    if(isset($_POST['news_submit'])){
-//        $insertNews->insert_news('news',$_POST['title'],$_POST['text'],$_FILES['img']['name']);
-//        header ("Location:create.php");
-//    }
-
-
-    ?>
-
-
 </body>
 </html>
