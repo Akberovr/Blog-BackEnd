@@ -17,6 +17,8 @@
         public $photo;
         public $img;
 
+
+
         public function __construct($host,$user,$pass,$db){
             $this->hostname=$host;
             $this->username=$user;
@@ -41,18 +43,14 @@
             $this->title = $title;
             $this->text = $text;
 
-//
-            $target_dir = "uploads/";
-            $target_file = $target_dir . basename($_FILES["img"]["name"]);
+            $img_name = $_FILES["img"]["name"];
+            $target_file = "uploads/" . basename($img_name);
 
-
-//            $insertNews->insert_news('news',$_POST['title'],$_POST['text'],$_FILES['img']['name']);
-//
-//
             $img = $target_file;
 
             if(isset($_POST['news_submit'])){
-                move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                move_uploaded_file($tmp_name, $target_file);
 
                 $sql="INSERT INTO news(title,text,photo,view) VALUES('$title','$text','$img',0)";
                 $query = mysqli_query($this->conn,$sql);

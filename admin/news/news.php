@@ -1,3 +1,11 @@
+<?php   include "db.php"; ?>
+<?php 
+       
+  $insertNews = new Database('localhost','root','','blog');
+  $newQuery = $insertNews->select_news('news');
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +36,6 @@
                 <th>VIEW</th>
             <tbody>
                 <?php
-
-                include "db.php";
-                $insertNews = new Database('localhost','root','','blog');
-
-                $newQuery = $insertNews->select_news('news');
-
-
                 while($row = mysqli_fetch_assoc($newQuery)){
                     ?> <tr> <?php
                     foreach($row as $key => $value){
